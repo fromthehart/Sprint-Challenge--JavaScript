@@ -30,24 +30,40 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+`.forEach` doesn't return anything and allows the original array to be mutated. `.map` returns a new array of the same size as the original.
+
 2. What is the difference between a function and a method?
+
+A method is a function which is internal to an object. Whereas a function is explicitly passed the data it needs, a method also has access to its object's data according to the rules of closure.
 
 3. What is closure?
 
+It provides inner functions access to variables from the functions which enclose them, and from the global scope. Data cascades from outer to inner, and does not bubble up from inner to outer.
+
 4. Describe the four rules of the 'this' keyword.
 
+  1. Within global scope, `this` refers to the window object (or console object in the case of headless javascript).
+
+  2. When a function is called by dot notation, `this` refers to the preceding object.
+
+  3. Inside an object created by a constructor function, `this` refers to the specific instance of the object.
+
+  4. `.call` or `.apply` can be used to explicitly bind `this` to a specified object.
+
 5. Why do we need super() in an extended class?
+
+`super()` passes the parameters from the extended class to the constructor of the parent class. If we didn't use it, the corresponding variables wouldn't be initialized and we wouldn't have access to the `this` keyword.
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-- [ ] You are now ready to build this project with your preferred IDE
+- [x] Create a forked copy of this project.
+- [x] Add PM as collaborator on Github.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+- [x] You are now ready to build this project with your preferred IDE
 - [ ] Implement the project on your Branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
 
